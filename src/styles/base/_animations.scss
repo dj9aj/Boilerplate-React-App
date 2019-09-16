@@ -1,0 +1,129 @@
+@keyframes moveInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-8rem);
+  }
+
+  90% {
+      opacity: .8;
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes moveInFarLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-20rem);
+  }
+
+  90% {
+      opacity: .8;
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+      opacity: .5;
+      transform: translateX(10rem);
+  }
+
+  80% {
+      transform: translateX(-1rem); 
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes moveInFarRight {
+  0% {
+      opacity: .5;
+      transform: translateX(20rem);
+  }
+
+  80% {
+      transform: translateX(-1rem); 
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(1rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes moveInFarTop {
+  0% {
+      opacity: 0;
+      transform: translateY(-5rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes flip {
+  0% {
+      opacity: 0;
+      transform: rotateY(180deg);
+  }
+
+  100% {
+      opacity: 1;
+      transform: rotateY(0);
+  }
+}
+
+.animateFromLeft {
+  animation: moveInFarLeft 0.5s ease-out;
+  opacity: 1;
+}
+
+.animateFromRight {
+  animation: moveInFarRight 0.5s ease-out;
+  opacity: 1;
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.flipRound {
+  animation: flip 0.8s ease-out;
+  opacity: 1;
+}

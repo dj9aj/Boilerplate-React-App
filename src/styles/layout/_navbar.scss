@@ -1,0 +1,145 @@
+.navbar {
+
+    display: flex;
+    position: absolute;
+    height: 7rem;
+    z-index: 100;
+    width: 100%;
+    margin: 2rem;
+    animation: moveInTop .5s ease-out .8s;
+    animation-fill-mode: backwards;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+        background-color: $color-grey-dark-3;
+        height: 6rem;
+        flex-direction: column;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        position: fixed;
+        animation: 0;
+    }
+
+    &__hamburger {
+        font-size: 4rem;
+        display: none;
+        margin-left: 2rem;
+        color: $color-tertiary;
+        
+        @media only screen and (max-width: $bp-medium) {
+            display: block;
+            cursor: pointer;
+            width: 3rem;
+        }
+    }
+
+    &__toggle {
+        display: none;
+    }
+    
+    &__list {
+        list-style: none;
+        color: $color-tertiary;
+        font-size: 1.8rem;
+
+        @media only screen and (max-width: $bp-medium) {
+           display: none;
+           width: 100%;
+           height: 60rem;
+           padding: 2rem 0;
+           transform: translateY(-.8rem); 
+           box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+           background-color: rgba($color-grey-dark-3, 1);
+        }
+    }
+
+    &__item {
+        display: inline;
+        position: relative;
+        
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 120%;
+        left: 23%;
+        height: 1px;
+        width: 52%;
+        background-color: $color-secondary;
+        transform: scaleX(0);
+        transition: transform .2s,
+                    height .4s .2s;           
+    }
+
+    &__item:hover::before {
+        transform: scaleX(1);
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: $color-tertiary;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline;
+        padding: 1.5rem 3rem;
+        margin: 1rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: block;
+            margin: 0;
+            margin-bottom: 1rem;
+            color: $color-grey-light-2;
+            font-weight: 700;
+            padding: 0 3rem;
+            &:hover {
+                color: $color-secondary;
+            }
+        }    
+    }    
+}
+
+#toggle:checked + .navbar__list {
+    display: block;
+}   
+
+#toggle:checked + .navbar {
+    height: 50rem;
+}
+
+.fixed {
+    position: fixed;
+    background-color: $color-grey-dark-3;
+    width: 100%;
+    height: 5rem;
+    z-index: 1000;
+    padding: 1rem 0;
+    margin: 0;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    animation: fadeIn .2s ease-out;
+    animation-fill-mode: backwards;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 0;
+        display: none;  
+    }
+}
+
+#navbar-phone-fixed {
+    
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        height: 6rem;
+
+        animation: fadeIn .3s ease-out .3s;
+        animation-fill-mode: backwards;
+    }
+}
+
+#navbar-phone-hidden {
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
+}
