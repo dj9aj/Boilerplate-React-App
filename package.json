@@ -4,9 +4,19 @@
   "description": "Boilerplate React application with Webpack, Babel and Sass.",
   "main": "index.js",
   "scripts": {
+    "build": "./node_modules/.bin/webpack -p --mode production",
+    "start": "./node_modules/.bin/webpack-dev-server --config ./webpack.config.js --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Jack Doyle",
+  "license": "ISC",
+  "devDependencies": {
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {}
 }
