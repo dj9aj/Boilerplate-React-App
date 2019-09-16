@@ -1,0 +1,12 @@
+{
+  "name": "react_webpack_sass_test",
+  "version": "1.0.0",
+  "description": "Boilerplate React application with Webpack, Babel and Sass.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
